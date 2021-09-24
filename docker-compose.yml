@@ -10,3 +10,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "Nh96UnZ79TrkTkeEsaMv9nf5fPeApVs78ygVYkRE"
       MYSQL_DATABASE: "fire_db"
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: "Nh96UnZ79TrkTkeEsaMv9nf5fPeApVs78ygVYkRE"
